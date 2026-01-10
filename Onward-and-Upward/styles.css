@@ -30,6 +30,10 @@ p {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
 li {
     list-style: none;
 }
@@ -71,7 +75,6 @@ nav {
 .nav__link--anchor {
     margin: 0 12px;
     color: black;
-    text-decoration: none;
     font-weight: 700;
 }
 
@@ -155,7 +158,6 @@ nav {
 }
 
 .about-me__links a {
-    text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -187,8 +189,12 @@ nav {
     padding: 40px 0 20px 0;
 }
 
-.section#languages {
+#languages {
     background-color: rgb(218, 217, 217);
+}
+
+#about-me {
+    background-color: #ffffff;
 }
 
 .language__img {
@@ -254,7 +260,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.language:hover .language__name {
+.language:hover, .language__name {
     transform: scale(1);
     opacity: 1;
     transition: transform 0.3s ease;
@@ -264,11 +270,13 @@ nav {
 
 .project {
     margin-bottom: 135px;
+    position: relative;
 }
 
 .project__img {    
     width: 100%;
     transition: all 500ms ease;
+    transform: scale(1.02);
 }
 
 .project__wrapper {
@@ -280,6 +288,7 @@ nav {
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
 
 .project__wrapper:before {
@@ -296,7 +305,7 @@ nav {
 }
 
 .project:hover .project__wrapper:before {
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .project:hover .project__img {
@@ -306,8 +315,8 @@ nav {
 
 .project:hover .project__description {
     opacity: 1;
-    transition: opacity 450ms ease;
-    transform: translateY(50%);
+    transition: opacity 450ms ease, transform 450ms ease;
+    transform: translateY(-50%);
 }
 
 .project__list {
@@ -335,7 +344,6 @@ font-size: 40px;
 .project__description--link{
     font-size: 20px;
     margin-right: 16px;
-    text-decoration: none;
 }
 
 .project__description--title,
@@ -346,3 +354,57 @@ font-size: 40px;
     color: #fff;
 }
 
+
+/* Footer */
+
+footer {
+    background-color: #57575f;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__social--list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 28px;
+}
+
+.footer__row {
+    padding: 8% 0;
+}
+
+.footer__logo--img {
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__social--link,
+.footer__copyright,
+.footer__logo-popper {
+    color: #fff;
+}
+
+.footer__logo-popper {
+    top: 30px;
+    font-weight: 700;
+    position: absolute;;
+    opacity: 0;
+}
+
+.footer__anchor {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer__anchor:hover .footer__logo-popper {
+    transform: translateX(60px);
+    opacity: 1;
+}
