@@ -379,6 +379,9 @@ footer {
 
 .footer__row {
     padding: 8% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer__logo--img {
@@ -421,4 +424,11 @@ footer {
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+.footer__copyright {
+    font-size: 14px;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
